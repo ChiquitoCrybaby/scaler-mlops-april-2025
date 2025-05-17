@@ -30,5 +30,10 @@ if clicked:
         st.write("## Daily volume chart")
         st.line_chart(Ticker_df.Volume)
 
+clicked = st.button("Click me to see the random dataframe bar chart")
+df = pd.DataFrame(np.random.rand(50,3), columns=['a','b','c'])
+if clicked:
+    st.write("You clicked")
+    st.bar_chart(df)
 
 
